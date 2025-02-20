@@ -14,7 +14,10 @@ html {
 
 :root {
   --backgroundColor: #f8fafc;
-  --textColor: #0f172a;
+  --textColor: #334155;
+
+  --shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -77,3 +80,58 @@ ul {
 }
 
 /* ============= PROJECT CSS =============== */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 90vw;
+    background-color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+
+    > h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .listContainer {
+      display: grid;
+      gap: 1.5rem;
+
+      .singleQuestion {
+        border: 2px solid #e2e8f0;
+        box-shadow: var(--shadow);
+        padding: 1rem 1.5rem;
+        text-align: left;
+
+        .titleContainer {
+          display: grid;
+          grid-template-columns: 1fr 1.5rem;
+
+          .title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.875rem;
+          }
+
+          .icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+          }
+        }
+
+        .info {
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+          letter-spacing: 1px;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}
