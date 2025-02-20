@@ -1,15 +1,14 @@
 import Question from './Question';
 
-const Questions = ({ questions, selectedIndex, toggleAnswer }) => {
+const Questions = ({ questions, actitveId, toggleAnswer }) => {
   return (
     <div className='listContainer'>
-      {questions.map((question, index) => {
-        const isSelected = index === selectedIndex;
+      {questions.map((question) => {
+        const isSelected = question.id === actitveId;
         return (
           <Question
             question={question}
             isSelected={isSelected}
-            index={index}
             toggleAnswer={toggleAnswer}
             key={question.id}
           />

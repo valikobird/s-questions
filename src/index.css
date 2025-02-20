@@ -89,10 +89,12 @@ main {
 
   .container {
     width: 90vw;
+    max-width: 800px;
     background-color: white;
     text-align: center;
     padding: 2rem;
     box-shadow: var(--shadow);
+    border-radius: 4px;
 
     > h2 {
       margin-bottom: 1.5rem;
@@ -107,6 +109,7 @@ main {
         box-shadow: var(--shadow);
         padding: 1rem 1.5rem;
         text-align: left;
+        border-radius: 4px;
 
         .titleContainer {
           display: grid;
@@ -120,6 +123,7 @@ main {
 
           .icon {
             font-size: 1.5rem;
+            color: var(--textColor);
             cursor: pointer;
           }
         }
@@ -129,7 +133,7 @@ main {
           line-height: 1.5rem;
           font-weight: 400;
           letter-spacing: 1px;
-          padding-top: 1rem;
+          margin-top: 1rem;
         }
       }
     }

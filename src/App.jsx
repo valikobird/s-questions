@@ -3,12 +3,12 @@ import questions from './data';
 import Questions from './components/Questions';
 
 const App = () => {
-  const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(1);
+  const [activeId, setActiveId] = useState(null);
 
-  const toggleAnswer = (clickedIndex) => {
-    setSelectedQuestionIndex((currentIndex) => {
-      const newIndex = clickedIndex === currentIndex ? -1 : clickedIndex;
-      return newIndex;
+  const toggleAnswer = (clickedId) => {
+    setActiveId((currentActiveId) => {
+      const newActiveId = clickedId === currentActiveId ? null : clickedId;
+      return newActiveId;
     });
   };
 
@@ -18,7 +18,7 @@ const App = () => {
         <h2>Questions</h2>
         <Questions
           questions={questions}
-          selectedIndex={selectedQuestionIndex}
+          actitveId={activeId}
           toggleAnswer={toggleAnswer}
         />
       </section>
